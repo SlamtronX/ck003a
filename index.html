@@ -3,11 +3,57 @@
 <html>
   <head>
     <title>CSK003a by Slamtron</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"     rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">     </script>
+    <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+     });
+    });
+</script>
+    
+    
+    <style>
+      h1, #myYear {
+        color: green;
+        font-family: 'Kanit', sans-serif;
+      }
+      
+      #panel, #flip {
+       padding: 5px;
+       text-align: center;
+       background-color: #e5eecc;
+       border: solid 1px #c3c3c3;
+        font-family: 'Kanit', sans-serif;
+      }
+
+      #panel {
+        padding: 50px;
+        display: none;
+      }
+      
+    </style>
+    
   </head>
   
   <body>
     <h1>Welcome to Cardano Starter Kit #003!</h1>
-    <p>Where we party like it's 1999</p>
+    <p>Where we party like it's <span id="myYear"></span></p>
+    
+    <div id="flip">Click Me</div>
+    <div id="panel">Hello world!</div>
+  
+  <script>
+    var year = 1999;
+    document.getElementById("myYear").innerHTML = year
+    
+  </script>
+  
   </body>
+  
   
 </html>
